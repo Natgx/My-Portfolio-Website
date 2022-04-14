@@ -1,0 +1,293 @@
+/* GENERAL STYLING OF THE WEBPAGE */
+/* BODY STYLING */
+body {
+    margin: 0%;
+}
+
+/* Heading Elements */
+h1 {
+    text-transform: uppercase;
+    font-family: "Lucida Bright, Rockwell";
+    text-align: center;
+    margin-top: 2%;
+    color: white;
+}
+
+/* Hover effect for the heading 1 element */
+h1:hover {
+    filter: grayscale(5%);
+    transform: scale(.9);
+    transition: .5s;
+}
+
+/* Styling for the Portfolio's title text */
+.black_text {
+    color: black;
+}
+
+/* Making the background white */
+.white_bg {
+    background-color: white;
+}
+
+/* Styling for paragraph elements */
+p {
+    font-family: "Rockwell", Lucida Bright;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 23px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* Hover effect for the paragraph element */
+p:hover {
+    transition: transform .5s;
+        transform: scale(.9);
+        color: yellowgreen;
+}
+
+/* To Center text */
+.center {
+    text-align: center;
+}
+
+/* Center class hover effect - This only affects the quote, github link, and footer */
+.center:hover {
+    transition: transform 1s;
+    transform: scale(.9); 
+}
+
+/* Anchor elements styling */
+a {
+    color: lightblue; 
+}
+
+/* Quotation elements styling */
+q {
+    font-style: italic;
+}
+
+/* Styling Image Elements */
+img {
+    filter: grayscale(50%);
+    border-radius: 10px;
+    max-width: 100%;
+    height: 320px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Image Element Hover Effects */
+img:hover {
+    filter: brightness(150%);
+    transition: transform 1s;
+    transform: scale(1.1);
+}
+
+/* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+/* Styling for Footer Element */
+footer {
+    padding: 5%;
+    background-color: grey;
+}
+
+/* END OF GENERAL STYLING OF WEBPAGE */
+
+/* STYLING OF NAVBAR */
+.navbar {
+    overflow: hidden;
+    background-color: darkgreen;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    -webkit-animation: moveNav 5s;
+    animation: moveNav 5s;
+}
+
+/* moveNav animation effect for moving the nav bar in from the left of the screen */
+@keyframes moveNav {
+    from {left: -100vw;} 
+    to {left: 0vw;} 
+}
+
+/* NAVBAR LINKS */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    font-size: 15px;
+    text-align: center;
+    position: relative; 
+    -webkit-animation: moveNavText 5.75s; 
+    animation: moveNavText 5.75s; 
+}
+
+@keyframes moveNavText {
+    from {top: -100vw;} 
+    to {top: 0vw;} 
+}
+
+@media screen and (max-width: 576px) {
+    .navbar a {
+        width: 25%; 
+        font-size: 12px;
+    }
+}
+
+/* Styling of Navbar Hover effects */
+.navbar a:hover {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+/* Styling of Navbar home button */
+.navbar a:active {
+    background-color: brown;
+}
+
+/* END OF NAVBAR STYLING */
+
+/* Styling of Video */
+
+/* Formatting for background video */
+#type_video {
+    position: fixed; 
+    right: 0; 
+    bottom: 0; 
+    min-width: 100%; 
+    z-index: -1; 
+}
+
+/* Screens that are 576px and smaller will not display the background video */
+@media screen and (max-width: 576px) {
+    #Typing_Video {
+        display: none;
+    }
+}
+
+/* Texts over the video */
+.video_text {
+    background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
+    color: white; /* Makes the font color white */
+    width: 100%; /* Ensures the video-text container fills the width of the video */
+    padding: 20px; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
+    position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
+    -webkit-animation: moveVideoText 5.75s;
+    animation: moveVideoText 5.75s;
+}
+
+/* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
+@keyframes moveVideoText {
+    from {top: -100vw;} 
+    to {top: 0vw;} 
+}
+/***** END OF VIDEO STYLING *****/
+
+/* Table Styling */
+* {
+    box-sizing: border-box;
+}
+
+.column_1 {
+    float: left;
+    width: 50%;
+    padding: 15px;
+    padding-top: 2%;
+    height: 400px;
+    background-color: green;
+}
+
+/* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
+@media screen and (max-width: 576px) {
+    .Column_1 {
+        overflow: auto;
+    }
+}
+
+.column_2 {
+    float: left;
+    width: 50%;
+    padding: 15px;
+    padding-top: 2%;
+    height: 400px;
+    background-color: grey;
+}
+
+.column_tall {
+    padding-top: 3.5%;
+    height: 500px;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* End of Table Styling */
+
+/* Styling of Contact Form */
+input[type=text] {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid yellowgreen;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 7px;
+    margin-bottom: 15px;
+    resize: vertical;
+    font-family: 'Rockwell, sans-serif';
+}
+
+/* Hover effects for the input boxes in the form */
+input[type=text]:hover {
+    box-shadow: 0 0 5px yellow inset;
+}
+
+/* Styling of Submit Button */
+input[type=submit] {
+    background-color: lightblue;
+    color: black;
+    font-weight: bold;
+    padding: 15px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Rockwell, sans-serif";
+}
+
+/* Hover Effect for the Submit Button */
+input[type=submit]:hover {
+    background-color: yellow; 
+    color: darkgreen; 
+    transform: scale(1.2); 
+    transition: transform 1.2s; 
+}
+
+/* Form element */
+form {
+    border-radius: 5px; 
+    background-color: #f2f2f2; 
+    padding: 10px; 
+    font-family: "Rockwell", sans-serif;
+}
+/* END STYLING THE CONTACT FORM */
+
+
+
