@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <!-- HEAD -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Nathaniel Noel's Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+    </head>
+    <!-- END HEAD -->
+
+    <!-- BODY -->
+    <body class="background">
+
+        <!-- NAVBAR -->
+        <div class="navbar">
+            <a class="active" href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#github">GitHub</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+            <!--BREAKS INSERTED TO ADD SPACE BETWEEN NAVBAR AND THE FIRST HEADING -->
+            <br>
+            <br>
+        
+        <!-- BACKGROUND VIDEO -->
+        <div id="home">
+            <video muted autoplay loop id="type_video">
+                <source src="./Video/first_video.mp4" alt="Your browser does not seem to support this HTML5 video">
+            </video>
+        </div>
+
+        <!-- Video Text -->
+        <div class="video_text">
+            <h1>Nathan's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>“Everyone in this country should learn how to program because it teaches you how to think”</q>
+                    <br>-Steve Jobs
+                    <br>
+                    <br>Hi my name Nathaniel Noel and welcome to my Portfolio page!
+                    <br>In this page you will learn more about me and what I can do.
+                </p>
+            </strong>
+        </div>
+
+        <!-- ABOUT SECTION -->
+        <div class="row" id="about">
+            <!-- Left Column -->
+            <div class="column_2">
+                <img src="./Img/img1.jpg" alt="Replace with your own image and description">
+            </div>
+            <!-- Right Column -->
+            <div class="column_1">
+                <h1 class="black_text">About</h1>
+                <p>Currently I am student in <a href="https://www.learncodinganywhere.com" target="_blank">Tech Academy</a>, enrolled in their Game Developer Bootcamp.
+                    <br>
+                    <br>One day I hope to get in the tech industry and help it grow and develop further.
+                    <br>
+                    <br>Soon I will be a junior software developer, you can <a href="#contact">Contact</a> me by filling up the form below!
+                </p>
+            </div>
+        </div>
+
+        <!-- GitHub Section -->
+        <div class="row" id="GitHub">
+
+            <!-- Left Column -->
+            <div class="column_1">
+                <h1 class="black_text">GitHub</h1>
+                <p class="center">
+                    Click the link below to check out my coding projects on GitHub:
+                    <br>
+                    <p class="center"><a href="https://github.com/Natgx" target="_blank">My GitHub</a></p>
+                </p>
+            </div>
+
+            <!-- Right Column -->
+            <div class="column_2">
+                <a href="https://github.com/the-tech-academy" target="_blank"><img src="./Img/GitHub-Logo.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="row" id="contact">
+            <!-- Contact Image on the left column -->
+            <div class="column_2 column_tall">
+                <img src="./Img/dmail.gif" alt="Contact_Image">
+            </div>
+
+            <!--Contact Form on the right column-->
+            <div class="column_1 column_tall">
+                <h1 class="black_text">Contact</h1>
+                <form action="" method="POST"> 
+                    <label>Name:</label>
+                    <input type="text" placeholder="Please enter your name here">
+                <label>Email:</label>
+                    <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                <label>Message:</label>
+                    <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                    <input type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </div>
+
+<!--Footer section-->
+    <footer class="white_bg">
+            <p>
+                <p class="center">&copy Noel Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">Hoenn Environment</a></p>
+                <br>
+            </p>
+        </footer>
+
+    </body>
+</html>
