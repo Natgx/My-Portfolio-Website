@@ -15,9 +15,12 @@
         <!-- NAVBAR -->
         <div class="navbar">
             <a class="active" href="#home">Home</a>
+            <!-- New section added -->
+            <a href="#slideshow">Slideshow</a>
             <a href="#about">About</a>
             <a href="#github">GitHub</a>
-            <a href="#contact">Contact</a>
+            <!-- Onclick and ondblclick functions added to open and close the contact form -->
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
 
             <!--BREAKS INSERTED TO ADD SPACE BETWEEN NAVBAR AND THE FIRST HEADING -->
@@ -27,7 +30,7 @@
         <!-- BACKGROUND VIDEO -->
         <div id="home">
             <video muted autoplay loop id="type_video">
-                <source src="Video/first_video.mp4" alt="Your browser does not seem to support this HTML5 video">
+                <source src="Video/first_video.mp4" type="video/mp4" alt="Your browser does not seem to support this HTML5 video">
             </video>
         </div>
 
@@ -45,11 +48,63 @@
             </strong>
         </div>
 
+        <!-- Slideshow section added -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Img/me.jpg" alt="Image can not be displayed">
+                        <div class="text">Happy to help you on your project!</div>
+                    </div>
+                    <!-- Slide 2 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Img/HTML_CSS_and_JavaScript.jpeg" alt="Image can not be displayed">
+                        <div class="text">I am a full-stack developer trained in:<br>HTML, CSS, and JavaScript.</div>
+                    </div>
+                    <!-- Slide 3 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Img/Python.png" alt="Image can not be displayed">
+                        <div class="text">the famous programming language Python,</div>
+                    </div>
+                    <!-- Slide 4 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Img/C_Sharp_and_Dot_NET.png" alt="Image can not be displayed">
+                        <div class="text">C#, .Net Framework, ASP.NET, MVC, </div>
+                    </div>
+                    <!-- Slide 5 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Img/SQL_and_Database.jpg" alt="Image can not be displayed">
+                        <div class="text">back-end development, databases and SQL.</div>
+                    </div>
+                    <!-- Slide 6 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images2" src="Img/dmail.gif" alt="Image can not be displayed">
+                        <div class="text"><a class="white-text contact" onclick="openForm()">"Feel free to Contact me!</a></div>
+                    </div>
+                    <!-- Previous and Next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!-- Adds a space between the slideshow images and the dots -->
+
+                <!-- Slideshow dots (this is another way for users to navigate through the slideshow) -->
+                <div style="text-align: center;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+            </div>
+        </div>
+
         <!-- ABOUT SECTION -->
         <div class="row" id="about">
             <!-- Left Column -->
             <div class="column_2">
-                <img src="Img/img1.jpg" alt="Replace with your own image and description">
+                <img src="Img/img1.jpg" alt="Image can not be displayed">
             </div>
             <!-- Right Column -->
             <div class="column_1">
@@ -58,7 +113,7 @@
                     <br>
                     <br>One day I hope to get in the tech industry and help it grow and develop further.
                     <br>
-                    <br>Soon I will be a junior software developer, you can <a href="#contact">Contact</a> me by filling up the form below!
+                    <br>Soon I will be a junior software developer, you can <a onclick="openForm()" class="contact">Contact</a> me by filling up the form below!
                 </p>
             </div>
         </div>
@@ -72,7 +127,7 @@
                 <p class="center">
                     Click the link below to check out my coding projects on GitHub:
                     <br>
-                    <p class="center"><a href="https://github.com/Natgx" target="_blank">My GitHub</a></p>
+                    <p class="center"><a href="https://github.com/Natgx" target="_blank">My GitHub</a></p> <!-- target="_blank" opens the linked document in a new window or tab -->
                 </p>
             </div>
 
@@ -83,26 +138,24 @@
         </div>
 
         <!-- Contact Section -->
-        <div class="row" id="contact">
-            <!-- Contact Image on the left column -->
-            <div class="column_2 column_tall">
-                <img src="Img/dmail.gif" alt="Contact_Image">
+        <div id="contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"><!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                    <label for="name"><b>Name:</b></label>
+                        <input type="text" placeholder="Please enter your name here" name="name" required>
+                    <label for="email"><b>Email:</b></label>
+                        <input type="text" placeholder="Please enter your email here" name="email" required>
+                    <label for="phone"><b>Phone:</b></label>
+                        <input type="text" placeholder="Type your phone number here" name="phone">
+                    <label for="message"><b>Message:</b></label>
+                        <input type="text" name="Message" placeholder="Please write your message here" name="message">
+                    
+                        <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                </form>
             </div>
-
-            <!--Contact Form on the right column-->
-            <div class="column_1 column_tall">
-                <h1 class="black_text">Contact</h1>
-                <form action="" method="POST"> 
-                    <label>Name:</label>
-                    <input type="text" placeholder="Please enter your name here">
-                <label>Email:</label>
-                    <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                <label>Message:</label>
-                    <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                    <input type="submit" value="SUBMIT">
-            </form>
         </div>
-    </div>
 
 <!--Footer section-->
     <footer class="white_bg">
@@ -111,6 +164,6 @@
                 <br>
             </p>
         </footer>
-
+        <script src="JS/portfolio.js"></script>
     </body>
 </html>
