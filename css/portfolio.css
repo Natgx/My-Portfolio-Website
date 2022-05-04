@@ -266,10 +266,10 @@ footer {
     position: absolute; /* This makes the next and previous buttons positioned relative to the slideshow container */
     top: 50%; /* This moves the buttons up in the slideshow container */
     width: auto; /* The width of the buttons is automatically adjusted based on the content */
-    padding: 2vw; /* Adds padding equal to 2% of the viewport width */
+    margin: 0px 600px;
     color: seagreen;
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     border-radius: 0 2px 2px 0; /* Adds a slightly rounded border on the top and bottom right corners */
     user-select: none; /* This property makes it so that the user cannot highlight the text */
     transition: 0.5 ease; /* This specifies the details of the hover transition for these elements */
