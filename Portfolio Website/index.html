@@ -23,10 +23,10 @@
             <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
 
-            <!--BREAKS INSERTED TO ADD SPACE BETWEEN NAVBAR AND THE FIRST HEADING -->
-            <br>
-            <br>
-        
+        <!--BREAKS INSERTED TO ADD SPACE BETWEEN NAVBAR AND THE FIRST HEADING -->
+        <br>
+        <br>
+
         <!-- BACKGROUND VIDEO -->
         <div id="home">
             <video muted autoplay loop id="type_video">
@@ -52,32 +52,37 @@
         <div id="Slideshow">
             <div id="Slideshow_Background">
                 <div id="Slideshow_Container">
-                    <!-- Slide 1 of 6 -->
+                    <!-- Slide 1 of 7 -->
                     <div class="mySlides fade">
                         <img class="Slideshow_Images" src="Img/me.jpg" alt="Image can not be displayed">
                         <div class="text">Happy to help you on your project!</div>
                     </div>
-                    <!-- Slide 2 of 6 -->
+                    <!-- Slide 2 of 7 -->
                     <div class="mySlides fade">
                         <img class="Slideshow_Images" src="Img/HTML_CSS_and_JavaScript.jpeg" alt="Image can not be displayed">
                         <div class="text">I am a full-stack developer trained in:<br>HTML, CSS, and JavaScript.</div>
                     </div>
-                    <!-- Slide 3 of 6 -->
+                    <!-- Slide 3 of 7 -->
                     <div class="mySlides fade">
                         <img class="Slideshow_Images" src="Img/Python.png" alt="Image can not be displayed">
                         <div class="text">the famous programming language Python,</div>
                     </div>
-                    <!-- Slide 4 of 6 -->
+                    <!-- Slide 4 of 7 -->
                     <div class="mySlides fade">
                         <img class="Slideshow_Images" src="Img/C_Sharp_and_Dot_NET.png" alt="Image can not be displayed">
                         <div class="text">C#, .Net Framework, ASP.NET, MVC, </div>
                     </div>
-                    <!-- Slide 5 of 6 -->
+                    <!-- Slide 5 of 7 -->
                     <div class="mySlides fade">
                         <img class="Slideshow_Images" src="Img/SQL_and_Database.jpg" alt="Image can not be displayed">
                         <div class="text">back-end development, databases and SQL.</div>
                     </div>
-                    <!-- Slide 6 of 6 -->
+                    <!-- Slide 6 of 7 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Img/cLanguages.jpeg" alt="Image can not be displayed">
+                        <div class="text">C# and C++</div>
+                    </div>
+                    <!-- Slide 7 of 7 -->
                     <div class="mySlides fade">
                         <img class="Slideshow_Images2" src="Img/dmail.gif" alt="Image can not be displayed">
                         <div class="text"><a class="white-text contact" onclick="openForm()">"Feel free to Contact me!</a></div>
@@ -87,7 +92,6 @@
                     <a class="Next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
                 <br> <!-- Adds a space between the slideshow images and the dots -->
-
                 <!-- Slideshow dots (this is another way for users to navigate through the slideshow) -->
                 <div style="text-align: center;">
                     <span class="dot" onclick="currentSlide(1)"></span>
@@ -96,6 +100,7 @@
                     <span class="dot" onclick="currentSlide(4)"></span>
                     <span class="dot" onclick="currentSlide(5)"></span>
                     <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
                 </div>
             </div>
         </div>
@@ -109,7 +114,8 @@
             <!-- Right Column -->
             <div class="column_1">
                 <h1 class="black_text">About</h1>
-                <p>Currently I am student in <a href="https://www.learncodinganywhere.com" target="_blank">Tech Academy</a>, enrolled in their Game Developer Bootcamp.
+                <p>
+                    Currently I am student in <a href="https://www.learncodinganywhere.com" target="_blank">Tech Academy</a>, enrolled in their Game Developer Bootcamp.
                     <br>
                     <br>One day I hope to get in the tech industry and help it grow and develop further.
                     <br>
@@ -127,7 +133,7 @@
                 <p class="center">
                     Click the link below to check out my coding projects on GitHub:
                     <br>
-                    <p class="center"><a href="https://github.com/Natgx" target="_blank">My GitHub</a></p> <!-- target="_blank" opens the linked document in a new window or tab -->
+                <p class="center"><a href="https://github.com/Natgx" target="_blank">My GitHub</a></p> <!-- target="_blank" opens the linked document in a new window or tab -->
                 </p>
             </div>
 
@@ -137,31 +143,53 @@
             </div>
         </div>
 
+        <!-- Additional Section on C++ and C# Projects -->
+        <div class="row" id="about">
+            <!-- Left Column -->
+            <div class="column_2">
+                <img src="Img/Maze.jpg" alt="Image can not be displayed">
+            </div>
+            <!-- Right Column -->
+            <div class="column_1">
+                <h1 class="black_text">Projects</h1>
+                <p>
+                    I have made a few projects on C# and C++ using Unity and Unreal Engine.
+                    <br>
+                    <br>These projects are mostly mazes and some are 2D games
+                    <br>
+                    <br>To see more of the short projects I made check out this link:
+                    <br>
+                    <p class="center"><a href="https://drive.google.com/drive/folders/1YfK3poFvrGAO12w7TpDjt6GHmmsFSJLn?usp=sharing" target="_blank">My Google Drive</a>
+                </p>
+            </div>
+        </div>
+
         <!-- Contact Section -->
         <div id="contact">
             <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
             <div class="form-popup" id="myForm">
-                <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"><!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
+                    <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
                     <label for="name"><b>Name:</b></label>
-                        <input type="text" placeholder="Please enter your name here" name="name" required>
+                    <input type="text" placeholder="Please enter your name here" name="name" required>
                     <label for="email"><b>Email:</b></label>
-                        <input type="text" placeholder="Please enter your email here" name="email" required>
+                    <input type="text" placeholder="Please enter your email here" name="email" required>
                     <label for="phone"><b>Phone:</b></label>
-                        <input type="text" placeholder="Type your phone number here" name="phone">
+                    <input type="text" placeholder="Type your phone number here" name="phone">
                     <label for="message"><b>Message:</b></label>
-                        <input type="text" name="Message" placeholder="Please write your message here" name="message">
-                    
-                        <button type="submit" class="btn">SUBMIT</button>
+                    <input type="text" name="Message" placeholder="Please write your message here" name="message">
+
+                    <button type="submit" class="btn">SUBMIT</button>
                     <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
         </div>
 
-<!--Footer section-->
-    <footer class="white_bg">
+        <!--Footer section-->
+        <footer class="white_bg">
             <p>
-                <p class="center">&copy Noel Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">Hoenn Environment</a></p>
-                <br>
+            <p class="center">&copy Noel Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">Hoenn Environment</a></p>
+            <br>
             </p>
         </footer>
         <script src="JS/portfolio.js"></script>
